@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #e67e22; /* Dark navy blue */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: makes it circular */
+}
+
+nav .logo span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e67e22; /* Orange accent */
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    background: #e67e22; /* Orange hover */
+    color: #2c3e50; /* Dark navy text */
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 250px; /* Set the height of the hero section */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/wheat.jpg') no-repeat center center; /* Correct path to image */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Ensures the image is centered */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1; /* Overlay layer */
+}
+
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2; /* Ensure text and buttons are on top of the overlay */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.why-partner {
+    background: linear-gradient(to bottom, #2c6e49, #3b7a5d); /* Forest green gradient */
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.why-partner h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #e67e22; /* Bright orange */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+.why-partner h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #e67e22; /* Bright orange accent */
+    display: block;
+    margin: 10px auto 0;
+}
+
+.why-partner .row {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-partner .row:nth-child(even) {
+    background: rgba(255, 165, 0, 0.1); /* Light orange alternate rows */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.why-partner h3 {
+    font-size: 28px;
+    color: #f39c12; /* Vivid orange */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.why-partner p {
+    font-size: 18px;
+    color: #ffffff; /* White text for better contrast on dark background */
+    line-height: 1.8;
+    text-align: left;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.why-partner img {
+    width: 60%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-partner img:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+.video {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video:hover {
+    transform: scale(1.03); /* Subtle hover zoom */
+}
+
+
+.blog {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4; /* Light gray background for distinction */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333; /* Darker title color for readability */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555; /* Slightly lighter text color */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-dark {
+    background-color: #343a40; /* Dark button color */
+    border-color: #343a40; /* Matching border color */
+}
+
+
+.faq-item {
+    background: #ecf0f1;
+    padding: 20px;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
